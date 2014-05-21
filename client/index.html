@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>myTodo</title>
+</head>
+<body>
+
+<script id="taskForm" type="text/template">
+	<input type="text" name="newTask" placeholder="Add New Task Here">
+	<button>Add</button>
+</script>
+
+<script id="__taskTemplate" type="text/template">
+	<input type="checkbox" <%= completed ? 'checked' : false %> >
+	<%= completed ? '<strike>'+ title +'</strike>' : title %>
+</script>
+
+<h4>Tasks</h4>
+
+<form id="addTask" action=''>
+	<input  type="text" placeholder="new task">
+	<input type="submit" value="add task">
+</form>
+
+<div class="tasks">
+	<script id="taskTemplate" type="text/template">
+	<span><%= title %></span> <button class="edit">Edit</button>  <button class="delete">Delete</button>
+	</script>
+</div>
+
+<script src="js/underscore.js"></script>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/backbone.js"></script>
+<script src="js/domevent.js"></script>
+
+
+</body>
+</html>
